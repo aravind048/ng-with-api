@@ -1,0 +1,112 @@
+.Navbar {
+    background-color: black;
+}
+
+.Navbar-cont {
+    justify-content: center;
+}
+
+.Navbar-brand {
+    color: white;
+}
+
+
+
+
+
+
+
+
+.button-container {
+    display: flex;
+    overflow-x: auto;
+    width: 90%;
+    /* Set a fixed width for the button container */
+}
+
+.custom-shape {
+    border-radius: 80px;
+    padding-left: 10px;
+    /* Adjust padding to accommodate the text */
+    padding-right: 10px;
+    /* Adjust padding to accommodate the text */
+    line-height: 1.5;
+    /* Adjust line height to control the spacing between lines */
+}
+
+.mat-button-color {
+    background-color: red;
+    color: white;
+}
+
+.selected-button {
+    background-color: red;
+    color: white;
+}
+
+.button-label,
+.button-date {
+    font-weight: medium;
+    text-align: center;
+}
+
+
+
+.button-container button {
+    margin-right: 80px;
+    /* Adjust margin for spacing between buttons */
+    min-width: 100px;
+    /* Set a minimum width for each button */
+}
+
+.button-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+
+
+.rounded-table-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.rounded-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.rounded-table th,
+.rounded-table td {
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.datas {
+    background-color: antiquewhite
+}
+
+.superscript {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.button-cell {
+    text-align: center;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.button-link {
+    color: black;
+}

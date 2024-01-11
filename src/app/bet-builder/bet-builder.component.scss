@@ -1,0 +1,226 @@
+.Navbar {
+  background-color: black;
+}
+
+.Navbar-cont {
+  justify-content: center;
+}
+
+.Navbar-brand {
+  color: white;
+}
+
+
+
+
+
+
+.btn-outline-white a {
+  color: #ea210b;
+  border-color: transparent;
+}
+
+.btn-outline-white a i {
+  font-size: 2rem;
+}
+
+
+
+
+
+
+.navbar-red {
+  background-color: red;
+}
+
+.navbar-content {
+  display: flex;
+}
+
+.navbar-content div:nth-child(1) {
+  flex: 0.5;
+}
+
+.navbar-content div:nth-child(2) {
+  flex: 6;
+  color: white;
+  justify-content: flex-start;
+}
+
+.navbar-content span {
+  font-size: 30px;
+}
+
+
+
+
+
+
+/* Adjust the slant angle as needed */
+.left-section {
+  background-color: red;
+  transform: skewX(-30deg);
+  width: 30%;
+  // font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.right-section {
+  transform: skewX(-30deg);
+  background-color: black;
+  // font-size: 30px;
+  font-weight: bold;
+  color: white;
+  width: 70%;
+  text-align: center;
+}
+
+
+
+
+
+
+
+.dummy {
+  width: 10%;
+
+}
+
+.selection {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  width: 60%;
+  // font-size: 25px;
+}
+
+/* Adjust the label's width and margin as needed for mobile */
+label {
+  min-width: 100px;
+  /* Adjust the width as needed */
+  margin-right: 10px;
+  /* Adjust the margin as needed */
+}
+
+/* Styles for smaller screens (e.g., mobile) */
+@media screen and (max-width: 768px) {
+  .selection {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  label {
+    min-width: auto;
+    /* Reset label width for smaller screens */
+    margin-right: 0;
+    /* Reset label margin for smaller screens */
+  }
+}
+
+
+.legs {
+  font-weight: bold;
+  width: 20%;
+  text-align: start;
+}
+
+.dum {
+  width: 10%;
+}
+
+
+
+
+
+
+
+
+.no-border-input {
+  border: none;
+  /* Remove the border */
+  outline: none;
+  /* Remove the outline on focus */
+  background: none;
+  /* Remove background color */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margin */
+  width: auto;
+  /* Adjust width as needed */
+}
+
+.input1 {
+  width: 5%;
+}
+
+.input2 {
+  font-weight: bold;
+  justify-content: flex-start;
+  width: 95%;
+  // font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.striped-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: none !important;
+  /* Remove borders on the outside of the table */
+}
+
+.striped-table th,
+.striped-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.striped-table th {
+  background-color: #f0f0f0;
+  border: none
+
+}
+
+.striped-table .odd {
+  background-color: #f7f7f7;
+}
+
+.striped-table .even {
+  background-color: #ffffff;
+}
+
+.heading {
+  color: red;
+}
+
+.red-text {
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+

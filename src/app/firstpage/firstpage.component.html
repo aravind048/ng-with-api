@@ -1,0 +1,76 @@
+<nav class="navbar Navbar mb-3">
+    <div class="container-fluid Navbar-cont">
+        <span class="navbar-brand Navbar-brand mb-0  h1">Bet Builder Fixture</span>
+    </div>
+</nav>
+
+
+
+<div class="container-fluid d-flex mb-3 button-container" id="buttonContainer">
+    <ng-container *ngFor="let button of buttonData; let i = index">
+        <button type="button" mat-flat-button class="custom-shape"
+            [ngClass]="{'mat-button-color': isRedButton1, 'selected-button': button.isButtonClicked}"
+            (click)="toggleTable(i)">
+            <div class="text-center fw-medium text-wrap button-label">
+                {{ button.label }}
+            </div>
+            <div class="text-center fw-medium text-wrap button-date" [innerHTML]="button.date">
+            </div>
+        </button>
+    </ng-container>
+</div>
+
+
+
+<section class="container-fluid">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between">
+            <div class=" bg-green mx-3 m-3 fw-bold" (click)="setSports('Football')">
+                <i class="fas fa-futbol" style="color: #376cc8;"></i> Football
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="rounded-table-container mb-3" *ngFor="let button of buttonData">
+    <table class="rounded-table" *ngIf="button.isTableVisible">
+        <thead>
+
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let countryData of button.tableData">
+                <tr>
+                    <th class="border border-bottom-0"></th>
+                </tr>
+                <tr>
+                    <td class="button-cell">
+                        <!-- <a [routerLink]="['/bet-builder', countryData.countryCode]" class="button-link"> -->
+                        <img [src]="getFlagIconURL(countryData.countryCode)" alt="Flag" width="30" height="30"
+                            (error)="onImageError($event, countryData)">
+                        {{ countryData.country }} {{ countryData.leagueName }}
+                        <!-- </a> -->
+                    </td>
+                </tr>
+                <ng-container *ngFor="let rowData of countryData.matches">
+                    <tr>
+                        <a [routerLink]="['/bet-builder', 'egypt']" style="text-decoration: none;">
+                            <td style="display: flex;" class="button-link border-top-0 datas">
+                                <div style="flex: 2; justify-content: flex-end; display: flex;">
+                                    <span style="text-decoration: none;">{{ rowData.team1 }}</span>
+                                </div>
+                                <div style="flex: 0.5; color: gray;">{{ rowData.matchTime }}</div>
+                                <div style="flex: 2; justify-content: flex-start; display: flex;">
+                                    <span>{{ rowData.team2 }}</span>
+                                </div>
+                            </td>
+                        </a>
+                    </tr>
+                </ng-container>
+            </ng-container>
+            <tr>
+                <th class="border border-top-0"></th>
+            </tr>
+        </tbody>
+    </table>
+</div>

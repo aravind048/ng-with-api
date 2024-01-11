@@ -1,0 +1,178 @@
+<!-- 1st PART -->
+
+<nav class="navbar Navbar mb-3">
+    <div class="container-fluid Navbar-cont">
+        <span class="navbar-brand Navbar-brand mb-0  h1">Bet Builder Fixture</span>
+    </div>
+</nav>
+
+<!-- 2nd PART -->
+
+<section class="container-fluid mb-3">
+    <div class="container-fluid">
+        <div class="btn-outline-white">
+            <a routerLink="/first-page" class="btn me-2" type="button">
+                <i class="fas fa-arrow-circle-left fa-2x"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- 3rd PART -->
+
+<nav class="navbar navbar-red mb-3">
+    <div class="container-fluid navbar-content">
+        <div></div>
+        <div class="fw-bold">
+            <span>Make it a Bet Builder?</span>
+        </div>
+    </div>
+</nav>
+
+<!-- 4th PART -->
+
+<nav class="navbar mb-3">
+
+    <div *ngIf="source === 'egypt'" class=" container-fluid">
+        <div class="left-section">
+            <span>Mar 25, 2022</span>
+            <div class="mb-1">
+                <span>13:20</span>
+            </div>
+        </div>
+        <div class=" right-section ">
+            <span>RAJASTHAN UNITED VS KENKRE FC</span>
+            <div class="mb-1">
+                <img src="assets/india.png" alt="Image" width="30" height="20">
+                IND I - LEAGUE
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="source === 'israel'" class=" container-fluid">
+        <div class="left-section">
+            <span>Mar 25, 2022</span>
+            <div class="mb-1">
+                <span>13:20</span>
+            </div>
+        </div>
+        <div class=" right-section ">
+            <span>RAJASTHAN UNITED VS KENKRE FC</span>
+            <div class="mb-1">
+                <img src="assets/india.png" alt="Image" width="30" height="20">
+                IND I - LEAGUE
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="source === 'saudi-arabia'" class=" container-fluid">
+        <div class="left-section">
+            <span>Mar 25, 2022</span>
+            <div class="mb-1">
+                <span>13:20</span>
+            </div>
+        </div>
+        <div class=" right-section ">
+            <span>RAJASTHAN UNITED VS KENKRE FC</span>
+            <div class="mb-1">
+                <img src="assets/india.png" alt="Image" width="30" height="20">
+                IND I - LEAGUE
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="source === 'india'" class=" container-fluid">
+        <div class="left-section">
+            <span>Mar 25, 2022</span>
+            <div class="mb-1">
+                <span>13:20</span>
+            </div>
+        </div>
+        <div class=" right-section ">
+            <span>RAJASTHAN UNITED VS KENKRE FC</span>
+            <div class="mb-1">
+                <img src="assets/india.png" alt="Image" width="30" height="20">
+                IND I - LEAGUE
+            </div>
+        </div>
+    </div>
+
+</nav>
+
+<!-- 5th PART -->
+
+<nav class="navbar mb-3">
+
+    <div class=" container-fluid">
+
+        <div class="dummy">
+            <span></span>
+        </div>
+
+        <div class="selection">
+            <label for="dropdown">Selection: </label>
+            <select id="dropdown" [(ngModel)]="selectedItem" (ngModelChange)="onItemChange()">
+                <option *ngFor="let item of items" [value]="item">{{ item }}</option>
+            </select>
+        </div>
+        <div class="legs">
+            <label for="dropdown1">Legs: </label>
+            <select id="dropdown1" [(ngModel)]="selectedLeg" (ngModelChange)="onLegChange()">
+                <option *ngFor="let leg of legs" [value]="leg">{{ leg }}</option>
+            </select>
+        </div>
+
+        <div class="dum">
+            <span></span>
+        </div>
+
+    </div>
+</nav>
+
+<!-- 6th PART -->
+
+<nav class="navbar mb-3">
+
+    <div class=" container-fluid">
+
+        <div class="input1">
+            <span></span>
+        </div>
+
+        <div class="input2">
+            <label for="betBuilderOdds">Bet Builder Odds:</label>
+            <input type="string" id="betBuilderOdds" [(ngModel)]="betBuilderOdds" class="no-border-input">
+        </div>
+    </div>
+</nav>
+
+<!-- 7th PART -->
+
+<nav class="navbar mb-3">
+    <div class="container-fluid">
+        <table class="striped-table">
+            <thead>
+                <tr class="heading">
+                    <th>Key Stats</th>
+                    <th>Market</th>
+                    <th>Outcome</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of rows; let even = even; let odd = odd">
+                    <td>
+                      <ng-container *ngFor="let segment of applyRedClass(row.col1)">
+                        <span [ngClass]="segment.isNumeric ? 'red-text' : (segment.isAll ? 'red-text' : '')">{{ segment.text }}</span>
+                      </ng-container>
+                    </td>
+                    <td>{{ row.col2 }}</td>
+                    <td>{{ row.col3 }}</td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</nav>
