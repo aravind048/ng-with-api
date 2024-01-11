@@ -1,5 +1,4 @@
-# ng-android
-Angular with API integration
+# Angular with API integration
 
 
 
